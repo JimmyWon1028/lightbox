@@ -135,10 +135,10 @@ pdfViewerUrl: 'pdf-viewer.html'
 ```js
 function addImage() {
   const a = document.createElement('a');
-  a.href = '3.jpg';
+  a.href = 'new-image.jpg';
   a.setAttribute('data-fancybox', 'gallery');
   a.setAttribute('data-type', 'image');
-  a.innerHTML = '<img src="3.jpg" alt="3.jpg">';
+  a.innerHTML = '<img src="new-image.jpg" alt="new-image.jpg">';
   document.querySelector('.gallery').appendChild(a);
 }
 ```

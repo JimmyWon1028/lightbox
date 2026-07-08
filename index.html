@@ -77,27 +77,12 @@
 <body>
   <h1>檔案展示</h1>
 
-  <div style="text-align:center;margin-bottom:20px;">
-    <button onclick="addImage()">+ 動態添加 3.jpg</button>
-  </div>
-
   <div class="gallery">
     <a href="1.jpg" data-fancybox="gallery">
       <img src="1.jpg" alt="1.jpg">
     </a>
-    <a href="2.jpg" data-fancybox="gallery" data-type="image">
-      <img src="2.jpg" alt="2.jpg">
-    </a>
     <a href="4.svg" data-fancybox="gallery" data-type="image">
       <img src="4.svg" alt="4.svg">
-    </a>
-    <a href="./202603-1001.pdf" data-fancybox="gallery" data-type="pdf">
-      <div class="gallery-item pdf">
-        <svg width="64" height="64" viewBox="0 0 24 24" fill="#e74c3c">
-          <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
-        </svg>
-        <div class="label">202603-1001.pdf</div>
-      </div>
     </a>
     <a href="./Report.pdf" data-fancybox="gallery" data-type="pdf">
       <div class="gallery-item pdf">
@@ -128,15 +113,6 @@
 
   <script>
     const fancybox = Lightbox.bind('[data-fancybox]',  { usePdfjsViewer: true });
-
-    function addImage() {
-      const a = document.createElement('a');
-      a.href = '3.jpg';
-      a.setAttribute('data-fancybox', 'gallery');
-      a.setAttribute('data-type', 'image');
-      a.innerHTML = '<img src="3.jpg" alt="3.jpg">';
-      document.querySelector('.gallery').appendChild(a);
-    }
   </script>
 </body>
 </html>
