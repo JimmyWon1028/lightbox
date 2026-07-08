@@ -1,3 +1,5 @@
+![Lightbox logo](assets/lightbox-logo.svg)
+
 # Lightbox 檔案預覽模組
 
 這個目錄是一個純前端的燈箱預覽模組，可用同一組 Lightbox 介面開啟圖片、PDF、iframe 內容與 3D 模型檔。示範入口是 `index.html`，主要邏輯在 `_js/lightbox.js`，PDF 專用 viewer 在 `_js/pdf-viewer.js`。
@@ -13,6 +15,8 @@
 | `_js/pdf.worker.min.js` | PDF.js worker |
 | `_js/pdf-lib.min.js` | 將簽名或圖形嵌回 PDF 時使用 |
 | `_js/online3DViewer/` | 3D 模型預覽與匯出依賴 |
+| `assets/` | README 與文件使用的品牌或說明圖形 |
+| `demo/` | 示範頁使用的圖片、PDF、3D 模型與圖示資源 |
 
 ## 載入順序
 
@@ -37,15 +41,15 @@ PDF inline viewer 需要先載入 PDF 相關依賴，再載入 Lightbox：
 HTML 元素只要加上 `data-fancybox` 就會被同一組 Lightbox 分組：
 
 ```html
-<a href="1.jpg" data-fancybox="gallery">
-  <img src="1.jpg" alt="1.jpg">
+<a href="demo/1.jpg" data-fancybox="gallery">
+  <img src="demo/1.jpg" alt="1.jpg">
 </a>
 
-<a href="./Report.pdf" data-fancybox="gallery" data-type="pdf">
+<a href="demo/Report.pdf" data-fancybox="gallery" data-type="pdf">
   <div class="gallery-item pdf">Report.pdf</div>
 </a>
 
-<a href="./M3ALLTDG.stl" data-fancybox="gallery">
+<a href="demo/M3ALLTDG.stl" data-fancybox="gallery">
   <div class="gallery-item pdf">M3ALLTDG.stl</div>
 </a>
 ```
@@ -166,11 +170,3 @@ http://127.0.0.1:8000/index.html
 - PDF 方向鍵在 viewer 內翻頁，不切換外層 gallery
 - 3D 模型可載入、旋轉、下載原檔與匯出
 - 動態新增元素後仍可點擊開啟
-
-## 維護注意事項
-
-- JavaScript 縮排使用兩格空白。
-- 程式碼註解使用英文。
-- 避免在 JavaScript 中使用模板字串包含大量 HTML 標籤。
-- 修改 viewer 尺寸時，要同時檢查桌面與窄視窗，避免外層按鈕與內層 toolbar 重疊。
-- 若改動 `_js/pdf-viewer.js` 的 ID 或 class，需同步檢查 `_js/lightbox.js` 對 `.pdf-viewer-host` 的樣式與測試。

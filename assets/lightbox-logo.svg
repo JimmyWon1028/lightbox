@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="220" viewBox="0 0 840 220" role="img" aria-labelledby="title desc">
+  <title id="title">Lightbox logo</title>
+  <desc id="desc">A lightbox preview logo with layered media cards, a focus beam, and the Lightbox wordmark.</desc>
+  <defs>
+    <linearGradient id="frameGradient" x1="48" y1="34" x2="174" y2="176" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="0.55" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="beamGradient" x1="78" y1="112" x2="190" y2="112" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#a7f3d0" stop-opacity="0.18"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="840" height="220" rx="32" fill="#f8fafc"/>
+  <g filter="url(#softShadow)">
+    <rect x="46" y="34" width="156" height="152" rx="26" fill="url(#frameGradient)"/>
+    <rect x="64" y="52" width="120" height="116" rx="18" fill="#0f172a" fill-opacity="0.88"/>
+    <path d="M82 112L174 68V156L82 112Z" fill="url(#beamGradient)"/>
+    <circle cx="94" cy="112" r="27" fill="#ffffff"/>
+    <circle cx="94" cy="112" r="15" fill="#38bdf8"/>
+    <circle cx="94" cy="112" r="7" fill="#0f172a"/>
+  </g>
+  <g>
+    <rect x="142" y="58" width="86" height="62" rx="12" fill="#ffffff" stroke="#bfdbfe" stroke-width="3"/>
+    <path d="M154 102L172 84L185 98L196 88L217 110H154Z" fill="#22c55e"/>
+    <circle cx="204" cy="75" r="7" fill="#f97316"/>
+    <rect x="158" y="134" width="78" height="56" rx="12" fill="#ffffff" stroke="#fed7aa" stroke-width="3"/>
+    <path d="M175 146H205L220 161V179H175Z" fill="#fff7ed" stroke="#f97316" stroke-width="3"/>
+    <path d="M205 146V162H220" fill="none" stroke="#f97316" stroke-width="3"/>
+    <rect x="240" y="92" width="72" height="72" rx="14" fill="#ffffff" stroke="#99f6e4" stroke-width="3"/>
+    <path d="M276 110L296 122V145L276 157L256 145V122Z" fill="#ccfbf1" stroke="#0f766e" stroke-width="3"/>
+    <path d="M256 122L276 134L296 122M276 134V157" fill="none" stroke="#0f766e" stroke-width="3"/>
+  </g>
+  <g fill="#0f172a">
+    <text x="350" y="100" font-family="Segoe UI Symbol, Arial, sans-serif" font-size="54" font-weight="700">Lightbox</text>
+    <text x="354" y="136" font-family="Segoe UI Symbol, Arial, sans-serif" font-size="19" fill="#475569">Image, PDF, iframe, and 3D preview module</text>
+  </g>
+</svg>
